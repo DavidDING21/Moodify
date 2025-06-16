@@ -1,0 +1,275 @@
+/* Reset base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fancy background with animated gradient */
+.app-layout {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, rgba(238, 119, 82, 0.05), rgba(231, 60, 126, 0.05), rgba(35, 166, 213, 0.05), rgba(35, 213, 171, 0.05));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced header with gradient */
+.app-header {
+  background: linear-gradient(90deg, #7928CA, #FF0080);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  position: relative;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(121, 40, 202, 0.25);
+}
+
+.app-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.15;
+}
+
+.app-content {
+  padding: 40px 0;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Gradient text effect with better contrast */
+.gradient-text {
+  background: linear-gradient(90deg, #7928CA, #FF0080);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Enhanced card styling */
+.ant-card {
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06) !important;
+}
+
+.ant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-card-head {
+  border-bottom: none;
+  padding: 12px 24px !important;
+}
+
+.ant-card-body {
+  padding: 12px 24px 24px !important;
+}
+
+/* Upload container with 3D effect */
+.upload-container {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 24px;
+  position: relative;
+  box-shadow: 
+    0 10px 30px rgba(121, 40, 202, 0.1),
+    0 1px 1px rgba(121, 40, 202, 0.1),
+    0 1px 1px rgba(121, 40, 202, 0.1);
+}
+
+.upload-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #7928CA, #FF0080);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.upload-container .ant-upload-drag {
+  border: 2px dashed rgba(121, 40, 202, 0.2);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f9f9f9, #f0f0f0);
+  transition: all 0.3s ease;
+}
+
+.upload-container .ant-upload-drag:hover {
+  transform: translateY(-5px);
+  border-color: #7928CA;
+  box-shadow: 0 10px 30px rgba(121, 40, 202, 0.15);
+}
+
+/* Fancy button styling */
+.primary-button {
+  background: linear-gradient(90deg, #7928CA, #FF0080);
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 0 24px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(121, 40, 202, 0.25);
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(121, 40, 202, 0.35);
+  background: linear-gradient(90deg, #8A3CD9, #FF267B);
+  color: white;
+}
+
+/* Original/Styled image containers with better presentation */
+.image-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.image-container:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.02);
+}
+
+.image-container .image-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.image-container.styled .image-label {
+  background: linear-gradient(90deg, rgba(121, 40, 202, 0.9), rgba(255, 0, 128, 0.9));
+  color: white;
+}
+
+/* Progress steps animation */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 0 15px;
+    height: 60px;
+    font-size: 20px;
+  }
+  
+  .app-content {
+    padding: 20px 0;
+  }
+  
+  .app-container {
+    padding: 0 15px;
+  }
+  
+  .upload-container {
+    padding: 30px 15px;
+  }
+}
+
+/* Loading animation */
+.loading-spinner {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
