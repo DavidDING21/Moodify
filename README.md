@@ -2,11 +2,11 @@
 
 Moodify is an application that analyzes the emotional content of uploaded images, matches them to appropriate artistic styles, and transforms them using style transfer. The system combines computer vision, emotion recognition, and artistic style transfer to create a unique visual experience.
 
-<img src="/Users/hongheding/Desktop/Screenshot 2025-06-18 at 6.04.55 PM.png" alt="Screenshot 2025-06-18 at 6.04.55 PM" style="zoom:30%;" />
+<img src="./pic/Screenshot 2025-06-18 at 6.04.55 PM.png" alt="Screenshot 2025-06-18 at 6.04.55 PM" style="zoom:30%;" />
 
-<img src="/Users/hongheding/Desktop/Screenshot 2025-06-18 at 6.05.18 PM.png" alt="Screenshot 2025-06-18 at 6.05.18 PM" style="zoom:30%;" />
+<img src="./pic/Screenshot 2025-06-18 at 6.05.18 PM.png" alt="Screenshot 2025-06-18 at 6.05.18 PM" style="zoom:30%;" />
 
-<img src="/Users/hongheding/Desktop/Screenshot 2025-06-18 at 6.05.32 PM.png" alt="Screenshot 2025-06-18 at 6.05.32 PM" style="zoom:30%;" />
+<img src="./pic/Screenshot 2025-06-18 at 6.05.32 PM.png" alt="Screenshot 2025-06-18 at 6.05.32 PM" style="zoom:30%;" />
 
 ## Contributors
 
